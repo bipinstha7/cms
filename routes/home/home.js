@@ -1,6 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
+// specific route preventing to access from admin
+router.all("/*", (req, res, next) => {
+  req.app.locals.layout = "home";
+  next();
+});
+
 // index route
 router.get("/", (req, res) => {
   res.render("home/index");
