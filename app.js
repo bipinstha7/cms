@@ -22,7 +22,7 @@ app.use("/admin",admin);
 app.use("/admin/posts",posts);
 
 
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
   console.log(`server is listening on port: ${port}`);
 });
